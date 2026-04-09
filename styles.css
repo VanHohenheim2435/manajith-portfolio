@@ -790,6 +790,11 @@ img {
   transition: gap 0.25s;
 }
 
+.case-study__doc-link .doc-link-icon {
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
 .case-study__doc-link::after {
   content: "↗";
 }
@@ -891,6 +896,38 @@ img {
 .about__bio strong {
   color: var(--color-accent);
   font-weight: 600;
+}
+
+.about__avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about__strengths {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about__strengths li {
+  position: relative;
+  padding-left: 20px;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.about__strengths li::before {
+  content: "◆";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-size: 0.55rem;
+  top: 6px;
 }
 
 .about__stats {
