@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manajith Shanker — Game Designer Portfolio</title>
+  <meta name="description" content="Portfolio of Manajith Shanker — Game Designer crafting immersive worlds, engaging mechanics, and unforgettable player experiences." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Cursor glow effect -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Particle canvas background -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav__logo">
+      <span class="nav__logo-bracket">&lt;</span>MS<span class="nav__logo-bracket">/&gt;</span>
+    </a>
+    <div class="nav__links">
+      <a href="#projects" class="nav__link" data-text="Projects">Projects</a>
+      <a href="#case-studies" class="nav__link" data-text="Case Studies">Case Studies</a>
+      <a href="#about" class="nav__link" data-text="About">About</a>
+      <a href="#skills" class="nav__link" data-text="Skills">Skills</a>
+      <a href="#contact" class="nav__link" data-text="Contact">Contact</a>
+    </div>
+    <button class="nav__menu-btn" id="menuBtn" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#projects" class="mobile-menu__link">Projects</a>
+    <a href="#case-studies" class="mobile-menu__link">Case Studies</a>
+    <a href="#about" class="mobile-menu__link">About</a>
+    <a href="#skills" class="mobile-menu__link">Skills</a>
+    <a href="#contact" class="mobile-menu__link">Contact</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero__content">
+      <p class="hero__greeting reveal-text" data-delay="0">Hello, I'm</p>
+      <h1 class="hero__name">
+        <span class="hero__name-line reveal-text" data-delay="200">Manajith Shanker</span>
+      </h1>
+      <div class="hero__title-wrapper">
+        <span class="hero__title-decorator"></span>
+        <h2 class="hero__title reveal-text" data-delay="400">Game Designer</h2>
+        <span class="hero__title-decorator"></span>
+      </div>
+      <p class="hero__tagline reveal-text" data-delay="600">
+        Crafting immersive worlds, engaging mechanics,<br />
+        and unforgettable player experiences.
+      </p>
+      <div class="hero__cta reveal-text" data-delay="800">
+        <a href="#projects" class="btn btn--primary">
+          <span class="btn__text">View My Work</span>
+          <span class="btn__icon">→</span>
+        </a>
+        <a href="#contact" class="btn btn--ghost">
+          <span class="btn__text">Get In Touch</span>
+        </a>
+      </div>
+    </div>
+    <div class="hero__scroll-indicator">
+      <div class="hero__scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <div class="section-header">
+      <span class="section-header__count">01</span>
+      <h2 class="section-header__title">Featured Projects</h2>
+      <p class="section-header__subtitle">A selection of worlds I've designed and brought to life</p>
+    </div>
+
+    <div class="projects__grid">
+      <!-- Project 1 -->
+      <article class="project-card" data-category="level-design">
+        <div class="project-card__image-wrapper">
+          <div class="project-card__image">
+            <img src="assets/projects/as-above-so-below/AA1.png" alt="As Above, So Below level layout screenshot" loading="lazy" />
+          </div>
+          <div class="project-card__glitch-bar"></div>
+          <div class="project-card__gallery" aria-label="As Above, So Below gallery">
+            <img src="assets/projects/as-above-so-below/AA1.png" alt="As Above, So Below screenshot 1" loading="lazy" />
+            <img src="assets/projects/as-above-so-below/AA2.png" alt="As Above, So Below screenshot 2" loading="lazy" />
+            <img src="assets/projects/as-above-so-below/AA3.png" alt="As Above, So Below screenshot 3" loading="lazy" />
+          </div>
+        </div>
+        <div class="project-card__content">
+          <div class="project-card__tags">
+            <span class="tag">Level Design</span>
+            <span class="tag">Hero Shooter</span>
+            <span class="tag">Control Map</span>
+          </div>
+          <h3 class="project-card__title">As Above, So Below</h3>
+          <p class="project-card__description">
+            A two-level king-of-the-hill map inspired by Overwatch's Lijiang Tower. Built symmetrical routes,
+            interconnected central spaces, and class-friendly vertical entries to support fair access, flanking,
+            and high replay value in team fights.
+          </p>
+          <div class="project-card__meta">
+            <span class="project-card__role">Level Designer</span>
+            <span class="project-card__separator">•</span>
+            <span class="project-card__year">2026</span>
+          </div>
+          <a href="#case-study-aa" class="project-card__link">
+            View Case Study <span>→</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project-card" data-category="level-design">
+        <div class="project-card__image-wrapper">
+          <div class="project-card__image">
+            <img src="assets/projects/abandoned-brewery/AB1.jpg" alt="The Abandoned Brewery outpost overview" loading="lazy" />
+          </div>
+          <div class="project-card__glitch-bar"></div>
+          <div class="project-card__gallery" aria-label="The Abandoned Brewery gallery">
+            <img src="assets/projects/abandoned-brewery/AB1.jpg" alt="The Abandoned Brewery screenshot 1" loading="lazy" />
+            <img src="assets/projects/abandoned-brewery/AB2.jpg" alt="The Abandoned Brewery screenshot 2" loading="lazy" />
+            <img src="assets/projects/abandoned-brewery/AB3.jpg" alt="The Abandoned Brewery screenshot 3" loading="lazy" />
+            <img src="assets/projects/abandoned-brewery/AB4.jpg" alt="The Abandoned Brewery screenshot 4" loading="lazy" />
+            <img src="assets/projects/abandoned-brewery/AB5.jpg" alt="The Abandoned Brewery screenshot 5" loading="lazy" />
+            <img src="assets/projects/abandoned-brewery/AB6.jpg" alt="The Abandoned Brewery screenshot 6" loading="lazy" />
+            <img src="assets/projects/abandoned-brewery/AB7.jpg" alt="The Abandoned Brewery screenshot 7" loading="lazy" />
+          </div>
+        </div>
+        <div class="project-card__content">
+          <div class="project-card__tags">
+            <span class="tag">Level Design</span>
+            <span class="tag">Stealth/Action</span>
+            <span class="tag">Outpost Sandbox</span>
+          </div>
+          <h3 class="project-card__title">The Abandoned Brewery</h3>
+          <p class="project-card__description">
+            A replayable outpost scenario designed for both aggressive and stealth approaches. The layout uses
+            layered sightlines, enemy distribution, and a high scouting vantage point so players can plan, improvise,
+            and clear the space in multiple viable ways.
+          </p>
+          <div class="project-card__meta">
+            <span class="project-card__role">Level Designer</span>
+            <span class="project-card__separator">•</span>
+            <span class="project-card__year">2026</span>
+          </div>
+          <a href="#case-study-ab" class="project-card__link">
+            View Case Study <span>→</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project-card" data-category="level-design">
+        <div class="project-card__image-wrapper">
+          <div class="project-card__image">
+            <img src="assets/projects/gwanlinn/G1.png" alt="Gwanlinn, The Forgotten City playable area" loading="lazy" />
+          </div>
+          <div class="project-card__glitch-bar"></div>
+          <div class="project-card__gallery" aria-label="Gwanlinn, The Forgotten City gallery">
+            <img src="assets/projects/gwanlinn/G1.png" alt="Gwanlinn screenshot 1" loading="lazy" />
+            <img src="assets/projects/gwanlinn/G2.png" alt="Gwanlinn screenshot 2" loading="lazy" />
+            <img src="assets/projects/gwanlinn/G3.png" alt="Gwanlinn screenshot 3" loading="lazy" />
+            <img src="assets/projects/gwanlinn/G4.png" alt="Gwanlinn screenshot 4" loading="lazy" />
+            <img src="assets/projects/gwanlinn/G5.png" alt="Gwanlinn screenshot 5" loading="lazy" />
+            <img src="assets/projects/gwanlinn/G6.png" alt="Gwanlinn screenshot 6" loading="lazy" />
+            <img src="assets/projects/gwanlinn/G7.png" alt="Gwanlinn screenshot 7" loading="lazy" />
+            <img src="assets/projects/gwanlinn/G8.png" alt="Gwanlinn screenshot 8" loading="lazy" />
+          </div>
+        </div>
+        <div class="project-card__content">
+          <div class="project-card__tags">
+            <span class="tag">Level Design</span>
+            <span class="tag">Soulslike</span>
+            <span class="tag">Exploration</span>
+          </div>
+          <h3 class="project-card__title">Gwanlinn, The Forgotten City</h3>
+          <p class="project-card__description">
+            A compact soulslike-inspired level featuring a guided introduction and an interconnected capital zone.
+            Focused on route readability, exploration loops, and intentional backtracking so players can discover
+            shortcuts and approach encounters with strong spatial understanding.
+          </p>
+          <div class="project-card__meta">
+            <span class="project-card__role">Level Designer</span>
+            <span class="project-card__separator">•</span>
+            <span class="project-card__year">2026</span>
+          </div>
+          <a href="#case-study-g" class="project-card__link">
+            View Case Study <span>→</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- Project 4 -->
+      <article class="project-card" data-category="game-design">
+        <div class="project-card__image-wrapper">
+          <div class="project-card__image">
+            <img src="assets/projects/siege-and-shield/S&amp;S1.png" alt="Siege and Shield gameplay concept image" loading="lazy" />
+          </div>
+          <div class="project-card__glitch-bar"></div>
+          <div class="project-card__gallery" aria-label="Siege and Shield gallery">
+            <img src="assets/projects/siege-and-shield/S&amp;S1.png" alt="Siege and Shield screenshot 1" loading="lazy" />
+            <img src="assets/projects/siege-and-shield/S&amp;S2.png" alt="Siege and Shield screenshot 2" loading="lazy" />
+            <img src="assets/projects/siege-and-shield/S&amp;S3.png" alt="Siege and Shield screenshot 3" loading="lazy" />
+            <img src="assets/projects/siege-and-shield/S&amp;S4.png" alt="Siege and Shield screenshot 4" loading="lazy" />
+            <img src="assets/projects/siege-and-shield/S&amp;S5.png" alt="Siege and Shield screenshot 5" loading="lazy" />
+          </div>
+        </div>
+        <div class="project-card__content">
+          <div class="project-card__tags">
+            <span class="tag">Game Design</span>
+            <span class="tag">Tower Defense</span>
+            <span class="tag">High Mobility</span>
+          </div>
+          <h3 class="project-card__title">Siege &amp; Shield</h3>
+          <p class="project-card__description">
+            A third-person tower defense concept blending Orcs Must Die style base defense with Titanfall-inspired
+            movement and wall running. Designed player flow, enemy roles, and tower economy to balance action-heavy
+            combat with strategic path building around castle defense.
+          </p>
+          <div class="project-card__meta">
+            <span class="project-card__role">Game Designer</span>
+            <span class="project-card__separator">•</span>
+            <span class="project-card__year">2026</span>
+          </div>
+          <a href="#case-study-ss" class="project-card__link">
+            View Case Study <span>→</span>
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Case Studies Section -->
+  <section class="case-studies" id="case-studies">
+    <div class="section-header">
+      <span class="section-header__count">02</span>
+      <h2 class="section-header__title">Case Studies</h2>
+      <p class="section-header__subtitle">Process-first breakdowns</p>
+    </div>
+
+    <div class="case-studies__grid">
+      <article class="case-study" id="case-study-aa">
+        <h3 class="case-study__title">As Above, So Below</h3>
+        <p class="case-study__meta">Role: Level Designer | Tools: Hammer Editor</p>
+        <a class="case-study__doc-link" href="https://docs.google.com/document/d/1tv3gx0_guFZaaow_FodM27VyJ2zgzQLPzZfFuHuHuO8/edit?usp=sharing" target="_blank" rel="noopener noreferrer">View Design Document</a>
+        <p class="case-study__pitch">
+          A competitive King of the Hill map with layered verticality, designed for frequent player encounters
+          while preserving readable routes and fair objective access.
+        </p>
+        <div class="case-study__block">
+          <h4>The Problem</h4>
+          <p>
+            The map needed to avoid two common pitfalls: oversized layouts that reduce engagement and cramped
+            layouts that remove tactical breathing room. The objective zone also had to prevent one team from
+            gaining uncontestable control.
+          </p>
+        </div>
+        <div class="case-study__block">
+          <h4>Constraints</h4>
+          <ul>
+            <li>Two-level layout with interconnected central spaces.</li>
+            <li>Multiple objective routes for both teams to support fairness.</li>
+            <li>Clear sniper and flanker opportunities without dominant sightline abuse.</li>
+          </ul>
+        </div>
+        <div class="case-study__block">
+          <h4>Process & Design Decisions</h4>
+          <ul>
+            <li>Researched Overwatch 2's Lijiang Tower to benchmark control-map flow and symmetry.</li>
+            <li>Blockout focused on equal travel times and mirrored access pressure to point.</li>
+            <li>Added class-based vertical entries so mobility heroes gain utility without mandatory picks.</li>
+            <li>Positioned health/ammo pickups to extend engagements and encourage team rotations.</li>
+          </ul>
+        </div>
+        <div class="case-study__block">
+          <h4>Playtesting & Iteration</h4>
+          <p>
+            Iteration cycles targeted route clarity, capture-point contest frequency, and high-ground value.
+            Adjustments were made to reduce dead zones and improve transition pacing between both levels.
+          </p>
+        </div>
+      </article>
+
+      <article class="case-study" id="case-study-ab">
+        <h3 class="case-study__title">The Abandoned Brewery</h3>
+        <p class="case-study__meta">Role: Level Designer | Tools: Far Cry 5 Map Editor</p>
+        <a class="case-study__doc-link" href="https://docs.google.com/document/d/1iKJAKkbNp3ZLaO_kT3ckii0CrZd0NV6B6eojhz5oXHs/edit?usp=sharing" target="_blank" rel="noopener noreferrer">View Design Document</a>
+        <a class="case-study__doc-link" href="https://www.youtube.com/watch?v=lVhcTot-Cf4" target="_blank" rel="noopener noreferrer">Watch Gameplay Video</a>
+        <p class="case-study__pitch">
+          An outpost-level case study built around player choice, supporting both stealth infiltration and direct
+          assault with no single dominant strategy.
+        </p>
+        <div class="case-study__block">
+          <h4>The Problem</h4>
+          <p>
+            Outpost encounters often break when one vantage point solves the full space. The challenge was to
+            preserve planning depth and player agency without trivializing combat through long-range safety.
+          </p>
+        </div>
+        <div class="case-study__block">
+          <h4>Constraints</h4>
+          <ul>
+            <li>5-10 minute average clear time depending on playstyle and skill.</li>
+            <li>Balanced support for loud and stealth routes.</li>
+            <li>Enemy distribution that discourages single-position dominance.</li>
+          </ul>
+        </div>
+        <div class="case-study__block">
+          <h4>Process & Design Decisions</h4>
+          <ul>
+            <li>Referenced Far Cry and Assassin's Creed outpost structures to study approach variety.</li>
+            <li>Built layered entry points and interior/exterior pressure zones.</li>
+            <li>Designed scouting spaces at elevation while preserving local counter-threats.</li>
+            <li>Spread enemy archetypes to force movement and tactical adaptation.</li>
+          </ul>
+        </div>
+        <div class="case-study__block">
+          <h4>Playtesting & Iteration</h4>
+          <p>
+            Test passes focused on stealth readability, combat escalation pacing, and recovery options after
+            failed infiltration. Encounter placements were refined to keep both approaches consistently viable.
+          </p>
+        </div>
+      </article>
+
+      <article class="case-study" id="case-study-g">
+        <h3 class="case-study__title">Gwanlinn, The Forgotten City</h3>
+        <p class="case-study__meta">Role: Level Designer | Tools: Unreal Engine</p>
+        <a class="case-study__doc-link" href="https://docs.google.com/document/d/1nf9hyyF79zHEegP3anxO7Jt7sTkrFBg3YwT2vsGu5lU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">View Design Document</a>
+        <p class="case-study__pitch">
+          A compact Soulslike-inspired level designed around exploratory loops, shortcut discovery, and spatial
+          memory through interconnected city structure.
+        </p>
+        <div class="case-study__block">
+          <h4>The Problem</h4>
+          <p>
+            The level needed to evoke FromSoftware-style exploration in a smaller scope while still providing
+            progression friction, orientation landmarks, and meaningful route decisions.
+          </p>
+        </div>
+        <div class="case-study__block">
+          <h4>Constraints</h4>
+          <ul>
+            <li>Intro area required to onboard players before the main city space.</li>
+            <li>Main zone had to reward exploration and intentional backtracking.</li>
+            <li>Target completion around 10-15 minutes, depending on combat implementation.</li>
+          </ul>
+        </div>
+        <div class="case-study__block">
+          <h4>Process & Design Decisions</h4>
+          <ul>
+            <li>Studied Bloodborne's Cathedral Ward for hub-linked pathing and loop structure.</li>
+            <li>Used landmark-driven composition to support orientation without heavy UI guidance.</li>
+            <li>Added hidden paths and shortcuts to reward curiosity and reduce backtrack fatigue.</li>
+            <li>Structured tension between safe areas and traversal risk to reinforce pace variety.</li>
+          </ul>
+        </div>
+        <div class="case-study__block">
+          <h4>Playtesting & Iteration</h4>
+          <p>
+            Feedback rounds prioritized navigation clarity, route confidence, and progression smoothness.
+            Adjustments improved discoverability while preserving mystery and non-linear exploration value.
+          </p>
+        </div>
+      </article>
+
+      <article class="case-study" id="case-study-ss">
+        <h3 class="case-study__title">Siege &amp; Shield</h3>
+        <p class="case-study__meta">Role: Design Lead | Tools: Unreal Engine</p>
+        <a class="case-study__doc-link" href="https://docs.google.com/document/d/1WQPMf1ua33i6c6AVTXVwXH-s484e9oEDzkwNVuKWHzo/edit?usp=sharing" target="_blank" rel="noopener noreferrer">View Design Document</a>
+        <a class="case-study__doc-link" href="https://www.youtube.com/watch?v=e9HLz_Gty-0" target="_blank" rel="noopener noreferrer">Watch Gameplay Video</a>
+        <p class="case-study__pitch">
+          A third-person tower defense design that combines base-building strategy with high-mobility movement
+          inspired by Titanfall-style traversal.
+        </p>
+        <div class="case-study__block">
+          <h4>The Problem</h4>
+          <p>
+            Traditional tower defense can become static. The design challenge was to preserve strategic depth
+            while introducing active player movement and combat participation.
+          </p>
+        </div>
+        <div class="case-study__block">
+          <h4>Constraints</h4>
+          <ul>
+            <li>Core loop had to combine tower placement, maze planning, and direct combat support.</li>
+            <li>Economy starts at fixed resources to enforce meaningful early decisions.</li>
+            <li>Enemy set includes melee, ranged, tank, and ogre pressure roles.</li>
+          </ul>
+        </div>
+        <div class="case-study__block">
+          <h4>Process & Design Decisions</h4>
+          <ul>
+            <li>Defined project vision and maintained the GDD as design lead.</li>
+            <li>Built tower roles (ballista, anti-ogre pylon, cauldron, life, garrison) around lane control.</li>
+            <li>Integrated wall-running and mobility to keep player agency high between build phases.</li>
+            <li>Balanced progression by aligning economy pressure with enemy wave composition.</li>
+          </ul>
+        </div>
+        <div class="case-study__block">
+          <h4>Playtesting & Iteration</h4>
+          <p>
+            Team feedback loops focused on tower value clarity, difficulty spikes, and traversal readability.
+            Iterations tightened the relationship between macro strategy and moment-to-moment action.
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="section-header">
+      <span class="section-header__count">03</span>
+      <h2 class="section-header__title">About Me</h2>
+      <p class="section-header__subtitle">The designer behind the designs</p>
+    </div>
+
+    <div class="about__content">
+      <div class="about__text">
+        <div class="about__avatar">
+          <div class="about__avatar-frame">
+            <div class="about__avatar-placeholder">
+              <span>MS</span>
+            </div>
+          </div>
+          <div class="about__avatar-decoration"></div>
+        </div>
+        <div class="about__bio">
+          <p>
+            I'm a game design graduate based in Stoke-on-Trent, United Kingdom, focused on
+            <strong>level design</strong> and <strong>player experience</strong>. I build spaces that
+            guide players through layout, flow, and environmental cues rather than explicit instruction.
+          </p>
+          <p>
+            My strongest work lives in non-linear exploration and encounter design, especially in RPG and
+            action-inspired environments. I am comfortable across genres and prioritize iteration through
+            playtesting, feedback, and rapid design improvements.
+          </p>
+          <p>
+            I stay up to date with industry trends, take ownership of tasks, and adapt quickly to new engines
+            and workflows. I am currently open to relocation for game design opportunities.
+          </p>
+        </div>
+      </div>
+
+      <div class="about__stats">
+        <div class="stat">
+          <span class="stat__number" data-target="4">0</span>
+          <span class="stat__label">Featured Projects</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number" data-target="2">0</span>
+          <span class="stat__label">Degrees Completed</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number" data-target="3">0</span>
+          <span class="stat__label">Engines in Use</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number" data-target="2">0</span>
+          <span class="stat__label">Languages Spoken</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
+    <div class="section-header">
+      <span class="section-header__count">04</span>
+      <h2 class="section-header__title">Skills & Tools</h2>
+      <p class="section-header__subtitle">My game design toolkit</p>
+    </div>
+
+    <div class="skills__grid">
+      <div class="skill-category">
+        <h3 class="skill-category__title">
+          <span class="skill-category__icon">◆</span>
+          Design Disciplines
+        </h3>
+        <ul class="skill-category__list">
+          <li>Level Design</li>
+          <li>Gameplay Design</li>
+          <li>Player Experience</li>
+          <li>Systems Design</li>
+          <li>Level Flow</li>
+          <li>Encounter Design</li>
+          <li>Playtesting & Iteration</li>
+          <li>Design Documentation</li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h3 class="skill-category__title">
+          <span class="skill-category__icon">◆</span>
+          Game Engines
+        </h3>
+        <ul class="skill-category__list">
+          <li>Unreal Engine</li>
+          <li>Hammer Editor</li>
+          <li>Far Cry 5 Map Editor</li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h3 class="skill-category__title">
+          <span class="skill-category__icon">◆</span>
+          Technical Skills
+        </h3>
+        <ul class="skill-category__list">
+          <li>Multiplayer Map Balance</li>
+          <li>Non-linear Exploration Design</li>
+          <li>Environmental Storytelling</li>
+          <li>Research-driven Iteration</li>
+          <li>Cross-genre Design Adaptability</li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h3 class="skill-category__title">
+          <span class="skill-category__icon">◆</span>
+          Tools & Software
+        </h3>
+        <ul class="skill-category__list">
+          <li>Adobe Photoshop</li>
+          <li>Adobe Premiere Pro</li>
+          <li>Microsoft Office</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="section-header">
+      <span class="section-header__count">05</span>
+      <h2 class="section-header__title">Let's Connect</h2>
+      <p class="section-header__subtitle">Ready to create the next great game together</p>
+    </div>
+
+    <div class="contact__content">
+      <div class="contact__info">
+        <p class="contact__message">
+          I'm currently looking for my next opportunity in game design. Whether you have 
+          a role in mind, a project to collaborate on, or just want to talk games — 
+          I'd love to hear from you.
+        </p>
+        <div class="contact__links">
+          <a href="mailto:manajith2435@gmail.com" class="contact__link">
+            <span class="contact__link-icon">✉</span>
+            <span class="contact__link-text">manajith2435@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/manajithshanker/" target="_blank" class="contact__link">
+            <span class="contact__link-icon">in</span>
+            <span class="contact__link-text">linkedin.com/in/manajithshanker</span>
+          </a>
+        </div>
+      </div>
+      <div class="contact__form-wrapper">
+        <form class="contact__form" id="contactForm">
+          <div class="form-group">
+            <input type="text" id="name" name="name" required placeholder=" " />
+            <label for="name">Your Name</label>
+            <span class="form-group__bar"></span>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" required placeholder=" " />
+            <label for="email">Your Email</label>
+            <span class="form-group__bar"></span>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+            <label for="message">Your Message</label>
+            <span class="form-group__bar"></span>
+          </div>
+          <p class="contact__form-hint">
+            Fills a draft in your email app — you send it from there (nothing is sent from this site).
+          </p>
+          <button type="submit" class="btn btn--primary btn--full" aria-label="Open your email app with a pre-filled message to Manajith">
+            <span class="btn__text">Compose in email app</span>
+            <span class="btn__icon">↗</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__content">
+      <p class="footer__copyright">
+        <span class="footer__bracket">&lt;</span>
+        Designed & built by Manajith Shanker &copy; 2026
+        <span class="footer__bracket">/&gt;</span>
+      </p>
+      <p class="footer__tagline">Every pixel is a design decision.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
